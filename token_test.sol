@@ -1,3 +1,7 @@
+/**
+ *Submitted for verification at Etherscan.io on 2020-09-26
+ */
+
 pragma solidity ^0.4.18;
 
 interface tokenRecipient {
@@ -20,10 +24,10 @@ contract TokenTest {
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Burn(address indexed from, uint256 value);
 
-    function TokenTest (
+    function TokenTest(
         string tokenName,
         string tokenSymbol,
-        uint256 initialSupply,
+        uint256 initialSupply
     ) public {
         name = tokenName; // 名称
         symbol = tokenSymbol; // 符号
@@ -31,7 +35,7 @@ contract TokenTest {
         balanceOf[msg.sender] = totalSupply; // 智能合约创建者全得
     }
 
-    function _transfer (
+    function _transfer(
         address _from,
         address _to,
         uint256 _value
@@ -44,14 +48,11 @@ contract TokenTest {
         Transfer(_from, _to, _value);
     }
 
-    function transfer (
-        address _to,
-        uint256 _value
-    ) public {
+    function transfer(address _to, uint256 _value) public {
         _transfer(msg.sender, _to, _value);
     }
 
-    function transferFrom (
+    function transferFrom(
         address _from,
         address _to,
         uint256 _value
@@ -62,17 +63,15 @@ contract TokenTest {
         return true;
     }
 
-    function approve (
-        address _spender,
-        uint256 _value
-    ) public returns (bool success) {
+    function approve(address _spender, uint256 _value)
+        public
+        returns (bool success)
+    {
         allowance[msg.sender][_spender] = _value;
         return true;
     }
 
-    function burn (
-        uint256 _value
-    ) public returns(bool success) {
+    function burn(uint256 _value) public returns (bool success) {
         require(balanceOf[msg.sender] >= _value);
         balanceOf[msg.sender] -= _value;
         totalSupply -= _value;
@@ -80,10 +79,10 @@ contract TokenTest {
         return true;
     }
 
-    function burnFrom (
-        address _from,
-        uint256 _value
-    ) public returns (bool success) {
+    function burnFrom(address _from, uint256 _value)
+        public
+        returns (bool success)
+    {
         require(balanceOf[_from] >= _value);
         require(_value <= allowance[_from][msg.sender]);
         balanceOf[_from] -= _value;
