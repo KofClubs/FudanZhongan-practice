@@ -1,9 +1,9 @@
-package main
+package view_controller
 
 import (
 	"fmt"
 	"io/ioutil"
-	"practice/view-function/view"
+	"practice/view_function/view"
 
 	"github.com/ethereum/go-ethereum/accounts/abi/bind"
 	"github.com/ethereum/go-ethereum/common"
@@ -13,10 +13,11 @@ import (
 const (
 	url           = "https://ropsten.infura.io/v3"
 	contractHex   = "0x8aC8dA2B230f891101Cb4d30a55A5abBcCBabE6d"
-	projectIDPath = "../Project-ID.txt"
+	projectIDPath = "./Project-ID.txt"
 )
 
-func main() {
+// Print 打印远程调用view函数的返回值
+func Print() {
 	content, err := ioutil.ReadFile(projectIDPath)
 	if err != nil {
 		fmt.Println(err)

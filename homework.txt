@@ -8,8 +8,12 @@
 
 2. 后端
 2.1. 编写Go代码，调用合约的View方法（只读）-0x8aC8dA2B230f891101Cb4d30a55A5abBcCBabE6d
-2.2. 编写Go代码，发送调用合约的交易（真正发上链的交易，需要签名等）
+2.2. 编写Go代码，发送调用合约的交易（真正发上链的交易，需要签名等）-0x44b2bcbfeb26ec7ab964042321e02b2a6faa9266bd3bfe2808bdde0396217654
 2.3. 用你喜欢的语言重复上述动作
+    0xd6d25f53cfabda2905f7c62e2df2c138630d86d42f39e2c87dadad626aa3ea48
+    0xaa28663c6d4f224b2de31c22eb4377de44c0d75b8d03167c0b56ebc429e00690
+    0x1a4b32e554e59fb7dcaa83612453277a6d9873a0b46188a68993e351751011a8
+    0xd1ec72ac28bc060e259fa0cf06d0498655092e4eaaf39f8b09d54f06e4dcd238
 
 3. 前端
 3.1. 编写Node.js及前端代码，接入Metamask钱包
