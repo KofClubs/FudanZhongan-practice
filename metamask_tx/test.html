@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>MetaMask Account</title>
+</head>
+
+<body>
+    <h1>Selected Account</h1>
+    <p id="account"></p>
+    <script src="./web3_bundle.js"></script>
+    <script>
+        var account = document.getElementById("account");
+        account.innerHTML = ethereum.selectedAddress;
+    </script>
+</body>
+
+</html>

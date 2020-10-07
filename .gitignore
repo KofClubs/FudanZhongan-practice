@@ -4,3 +4,5 @@ infura-test.txt
 Project-ID.txt
 Private-Key.txt
 main
+/metamask_tx/node_modules
+metamask_tx/web3_bundle.js
